@@ -8,11 +8,11 @@ services:
     ports:
             - "8181:8181"
     entrypoint: ["tail", "-f", "/dev/null"]
+    networks:
+    - mynetwork
 
 volumes:
   clientvol:
 
-networks: 
-  default: 
-    external: 
-      name: my-network 
+networks:
+  mynetwork:
